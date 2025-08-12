@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors: Battle Arena</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-container">
+        <div class="animated-bg"></div>
+        <div class="particle-field" id="particle-field"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div class="game-arena">
+        <!-- Header with Neon Title -->
+        <header class="game-header">
+            <h1 class="neon-title">
+                <span class="title-main">BATTLE ARENA</span>
+                <span class="title-sub">Rock • Paper • Scissors</span>
+            </h1>
+        </header>
+
+        <!-- Advanced Scoreboard -->
+        <div class="scoreboard-container">
+            <div class="scoreboard">
+                <div class="player-section">
+                    <div class="player-avatar">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-icon">👤</div>
+                    </div>
+                    <div class="score-info">
+                        <span class="player-label">PLAYER</span>
+                        <span class="score-value" id="player-score">0</span>
+                    </div>
+                </div>
+
+                <div class="vs-section">
+                    <div class="vs-text">VS</div>
+                    <div class="round-info">
+                        <span class="round-label">ROUND</span>
+                        <span class="round-value"><span id="round-count">1</span>/5</span>
+                    </div>
+                </div>
+
+                <div class="computer-section">
+                    <div class="score-info">
+                        <span class="player-label">AI</span>
+                        <span class="score-value" id="computer-score">0</span>
+                    </div>
+                    <div class="player-avatar">
+                        <div class="avatar-glow ai-glow"></div>
+                        <div class="avatar-icon">🤖</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Battle Arena -->
+        <div class="battle-arena">
+            <div class="battle-stage">
+                <!-- Player Hand -->
+                <div class="hand-container player-hand">
+                    <div class="hand-display" id="player-hand">
+                        <div class="hand-gesture">✊</div>
+                        <div class="hand-glow"></div>
+                    </div>
+                    <div class="hand-label">YOUR CHOICE</div>
+                </div>
+
+                <!-- VS Lightning Effect -->
+                <div class="vs-lightning">
+                    <div class="lightning-bolt"></div>
+                    <div class="energy-field"></div>
+                </div>
+
+                <!-- Computer Hand -->
+                <div class="hand-container computer-hand">
+                    <div class="hand-display" id="computer-hand">
+                        <div class="hand-gesture">❓</div>
+                        <div class="hand-glow ai-hand-glow"></div>
+                    </div>
+                    <div class="hand-label">AI CHOICE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Choice Buttons -->
+        <div class="choice-arena">
+            <button class="choice-btn" data-choice="rock">
+                <div class="btn-glow"></div>
+                <div class="btn-content">
+                    <div class="choice-icon">✊</div>
+                    <div class="choice-name">ROCK</div>
+                    <div class="choice-desc">Crushes Scissors</div>
+                </div>
+                <div class="btn-particles"></div>
+            </button>
+
+            <button class="choice-btn" data-choice="paper">
+                <div class="btn-glow"></div>
+                <div class="btn-content">
+                    <div class="choice-icon">✋</div>
+                    <div class="choice-name">PAPER</div>
+                    <div class="choice-desc">Covers Rock</div>
+                </div>
+                <div class="btn-particles"></div>
+            </button>
+
+            <button class="choice-btn" data-choice="scissors">
+                <div class="btn-glow"></div>
+                <div class="btn-content">
+                    <div class="choice-icon">✌️</div>
+                    <div class="choice-name">SCISSORS</div>
+                    <div class="choice-desc">Cuts Paper</div>
+                </div>
+                <div class="btn-particles"></div>
+            </button>
+        </div>
+
+        <!-- Result Display -->
+        <div class="result-container">
+            <div id="result-message" class="result-message"></div>
+            <div class="battle-effects" id="battle-effects"></div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <button id="play-again" class="control-btn" style="display:none;">
+                <span class="btn-text">NEW BATTLE</span>
+                <div class="btn-shine"></div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Audio Elements (for future sound effects) -->
+    <audio id="battle-sound" preload="auto">
+        <!-- Sound files would go here -->
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
